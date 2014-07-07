@@ -20,11 +20,11 @@ div#navigation
 	margin:0;
 }
 
-h1 
+#header
 {
 	font-family: 'Lato';
 	margin: 0 0 0 0;
-	padding: 0.75em 0 0 0;
+	padding: 0.25em 0 0 0.5em;
 	font-size: 20pt;
 	font-weight: 400;
 	color: #4d4d4d;
@@ -60,20 +60,11 @@ p
 	color: #4d4d4d;
 }
 
-div#content
+#content
 {
 	background-color: white;
-	padding: 0px 0px 0px 5px;
+	padding: 0 0 0 5px;
 	margin: 0;
-}
-
-div#controls
-{
-	width: 100%;
-	margin: 15px auto;
-	font-family: 'Lato';
-	font-size: 10px;
-	color: #666666;
 }
 
 div#footer
@@ -81,17 +72,19 @@ div#footer
 	font-family: 'Lato';
 	font-size: 10px;
 	color: #666666;
+	margin-left: 0.5em;
 }
 
-div#commentary {
+#commentary {
 	font: 900 20px 'Lato';	
 	color: #525252;
-	padding: 0em 0em 1em 13.25em;
-	float: bottom;
+	height: 30px;
+	width: auto;
+	padding: 5px 60px 5px 260px;
 }
 
 div#commentary text {
-	margin-top: 20px;
+
 }
 
 div.chartBox {
@@ -102,49 +95,6 @@ div.chartBox {
 	float: left;
 	margin: 10px 0 10px 0;
 }
-
-div#navChart{
-
-}
-
-.story {
-	display: inline-block;
-	vertical-align: middle;
-	font: 600 14px 'Lato';	
-	padding: 8px;
-	margin: 0px 0px 4px -8px;
-	border: 1px solid #ddd;
-	border-radius: 10px;
-	/*box-shadow: 0 0 16px 5px #ddd inset;*/
-	width: 210px;
-	overflow: hidden;
-	word-break: break-all;
-	word-break: break-word;
-	-webkit-hyphens: auto;
-	hyphens: auto;
-	background-color: #fefefe;
-	position: relative;
-}
-
-.story a:link, a:visited {
-	color: #525252;
-	text-decoration: none;
-}
-
-.story a:hover {
-	color: steelblue;
-	text-decoration: none;
-
-}
-
-div#story2:hover{	
-	background-color: #eee;
-}
-
-div#story3 {
-}
-
-
 
 
 .numStudents {
@@ -157,9 +107,10 @@ a
 	font-family: 'Lato';
 }
 
-/*a:link 
+a:link 
 { 
 	color: #666666; 
+	text-decoration: none;
 	
 }
 
@@ -177,7 +128,7 @@ a:focus
 
 a:hover 
 { 
-	color: red; 
+	color: steelblue; 
 	
 }
 
@@ -185,11 +136,32 @@ a:active
 { 
 	color: #666666; 
 	
-}*/
+}
 
 /*---------------*/
 /* Nav Chart */
 /*---------------*/
+
+.story {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	font: 900 16px 'Lato';
+	padding: 8px;
+	margin: 3em 0px 4px -8px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	/*box-shadow: 0 0 16px 5px #ddd inset;*/
+	width: 210px;
+	overflow: hidden;
+	word-break: break-all;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+	background-color: #fefefe;
+	position: relative;
+}
+
 
 .bar {
   opacity: .95;	
@@ -265,21 +237,22 @@ a:active
 .checkboxText
 {
 	font-family: 'Lato';
-	font-size: 10pt;
-	margin: 0 0 0 0;
-	padding: 0px 0 0 0;
+	font-size: 11pt;
+	margin: auto;
 	float: left;
 	color: #4d4d4d;
-	vertical-align: text-top;
 }
 
 .box 
 {
 	width: 100%;
-	float: left;
-	margin: 5px 0 10px 0;
+	margin: 1em 0 0 0;
 }
 
+#showNumberCheckbox {
+	width:19px;
+    height:19px;
+}
 /*-----------------*/
 /* Overview Button */
 /*-----------------*/

@@ -26,9 +26,9 @@
 		var AGGREGATE_SCALE_FACTOR = 450.0;
 		var CURRENT_DIM_POS_X = 50.0;
 		var FLOW_GAP = 4.0;
-		var width_per_dimension = 250;
+		var width_per_dimension = 350;
 		var INTERACTION_WIDTH = 100;
-		var MARGIN_TOP = 100.0;
+		var MARGIN_TOP = 80.0;
 		var currDimPosX = CURRENT_DIM_POS_X;
 		var current_dimension = 0;
 		var min_value = -1;
@@ -39,7 +39,7 @@
 		var data; 
 		var dimensions;
     	var divisionColors;
-    	var category20b_sq = [  '#bd9e39',  '#b5cf6b', '#637939', '#01665E', '#35978F', "#393B79","#6B6ECF","#5254A3","#88419d","#7a0177","#CE6DBD", "#e7298a","#e7298a","#dd3497","#f0027f"]; 
+    	var category20b_sq = ['#bd9e39',  '#b5cf6b', '#637939', '#01665E', '#35978F', "#393B79","#6B6ECF","#5254A3","#88419d","#7a0177","#CE6DBD", "#e7298a","#e7298a","#dd3497","#f0027f"]; 
     	// reds
     	// "#a50f15","#cb181d","#ef3b2c","#fb6a4a","#fc9272", "#fcbba1"
     	// var category20b_sq = ['#393b79',  '#bd9e39', '#ad494a',  '#637939', '#7b4173' - blue-red, "#003c30","#543005", '#6b6ecf', '#e7ba52','#d6616b','#b5cf6b', '#ce6dbd',"#35978f","#bf812d"];
@@ -278,21 +278,7 @@
 					// }
 						
 				});
-
-
-			// tooltips : show tooltips only for links that are highlighted.
-			// NOTE: turns out this doesn't make much UI sense; the flows are way too small for tooltips to really show up very easily
-      		// var linkTip = d3.tip()
-	       //      .attr('class', 'd3-tip')
-	       //      .offset([-10, 50])
-	       //      .html(function(d) { return d3.select(this).attr("class") === "flow_line_highlighted" ? "<span style='color:#ef8a62'>"  + d.value + "</span> " : "";});
-
-
-	      //set up the tool tips
-	      // d3.selectAll(".flow_line").call(linkTip);
-	      //           d3.selectAll(".flow_line").on('mouseover', linkTip.show)
-	      //               .on('mouseout', linkTip.hide);
-			
+	
 			addAggregateLabels();
 			drawInteractionShapes();
 			loadingFinished(true);
@@ -494,9 +480,8 @@
 			if(!dimension) {
 				d3.select("#commentary").append("text")
 						.style("opacity", 0)
-						.attr("transform", "translate(400,200)")
-						.html("Click on any of the colored bars above to filter the flow chart from that perspective.");
-
+						.html("Hello. Click on any of the <span style='color:#bd9e39;'>c</span><span style='color:#b5cf6b;'>o</span><span style='color:#637939;'>l</span><span style='color:#01665E;'>o</span><span style='color:#35978F;'>r</span><span style='color:#393B79;'>e</span><span style='color:#6B6ECF;'>d</span> <span style='color:#88419d;'>b</span><span style='color:#7a0177;'>a</span><span style='color:#CE6DBD;'>r</span><span style='color:#e7298a;'>s</span> (below) or on the <span style='color:#6B6ECF;'>b</span><span style='color:#35978F;'>a</span><span style='color:#bd9e39;'>r</span> <span style='color:#7a0177;'>c</span><span style='color:#CE6DBD;'>h</span><span style='color:#5254A3;'>a</span><span style='color:#393B79;'>r</span><span style='color:#e7298a;'>t</span><span style='color:#bd9e39;'>s</span> (on the left)<br>to filter the flows from that perspective. And try showing/hiding the number of students.<br>&larr; For more context, please see the accompanying Major Migration Narrative");
+						// ['#bd9e39',  '#b5cf6b', '#637939', '#01665E', '#35978F', "#393B79","#6B6ECF","#5254A3","#88419d","#7a0177","#CE6DBD", "#e7298a","#e7298a","#dd3497","#f0027f"]
 			d3.selectAll("#commentary text")
 					.transition().delay(3000).duration(2000)
 					.style("opacity",1);
@@ -514,20 +499,17 @@
 
 					d3.select("#commentary").append("text")
 						.style("opacity", 0)
-						.attr("transform", "translate(400,200)")
 						.html("Of the <span class='numStudents'>" + formatNumber(sum_values[0][sv0]) + "</span> students who entered L&S without an intended major,<br><span class='numStudents'>" + formatPercentage(sum_values[1]["dNo Declared Major"] / sum_values[0][sv0]) + "</span> did not declare a major and <span class='numStudents'>" + formatPercentage(sum_values[2]["gNo Degree"] / sum_values[0][sv0]) + "</span> did <span style='color:#fb6a4a;'>not</span> earn a degree by the end of the 2012-13 Academic Year.");
 					}
 				else if(dimension=="iNo Intended Major") {
 
 					d3.select("#commentary").append("text")
 						.style("opacity", 0)
-						.attr("transform", "translate(400,200)")
 						.html("Of the <span class='numStudents'>" + formatNumber(sum_values[0][sv0]) + "</span> students who entered without an intended major,<br><span class='numStudents'>" + formatPercentage((isNaN(sum_values[1]["dNo Declared Major"]) ? 0 : sum_values[1]["dNo Declared Major"]) / sum_values[0][sv0]) + "</span> did not declare a major and <span class='numStudents'>" + formatPercentage(sum_values[2]["gNo Degree"] / sum_values[0][sv0]) + "</span> did not earn a degree by the end of the 2012-13 Academic Year.");
 					}
 				else {
 					d3.select("#commentary").append("text")
 						.style("opacity", 0)
-						.attr("transform", "translate(400,200)")
 						.html("Of the <span class='numStudents'>" + formatNumber(sum_values[0][sv0]) + "</span> students who entered intending to pursue a degree in " + sv0.substring(1,sv0.length).replace(" and ", "&") + ",<br><span class='numStudents'>" + formatPercentage(sum_values[1][sv1] / sum_values[0][sv0]) + "</span> declared their major there, and <span class='numStudents'>" + formatPercentage(sum_values[2][sv2] / sum_values[0][sv0]) + "</span> received their degrees from " + sv0.substring(1,sv0.length).replace(" and ", "&") + ".<br>A total of <span class='numStudents'>" + formatPercentage(1 - (isNaN(sum_values[2]["gNo Degree"]) ? 0 : sum_values[2]["gNo Degree"])/ sum_values[0][sv0]) + "</span> earned a degree from UC Berkeley by the end of the 2012-13 Academic Year.");
 					}
 			}
@@ -538,13 +520,11 @@
 
 					d3.select("#commentary").append("text")
 						.style("opacity", 0)
-						.attr("transform", "translate(400,200)")
 						.html("Of the <span class='numStudents'>" + formatNumber(sum_values[1][sv1]) + "</span> students who did not declare a major,<br><span class='numStudents'>" + formatPercentage(sum_values[0]["iL and S Undeclared"] / sum_values[1][sv1] ) + "</span> entered Letters & Science undeclared, <br>and <span class='numStudents'>" + formatPercentage(sum_values[2]["gNo Degree"] / sum_values[1][sv1]) + "</span> did <span style='color:#fb6a4a;'>not</span> earn a degree by the end of the 2012-13 Academic Year.");
 					}
 				else {
 				d3.select("#commentary").append("text")
 					.style("opacity", 0)
-					.attr("transform", "translate(400,200)")
 					.html("Of the <span class='numStudents'>" + formatNumber(sum_values[1][sv1]) + "</span> students who declared their major within " + sv1.substring(1,sv1.length).replace(" and ", "&") + ",<br><span class='numStudents'>" + formatPercentage(sum_values[0][sv0] / sum_values[1][sv1]) + "</span> intended to major there, and <span class='numStudents'>" + formatPercentage(sum_values[2][sv2] / sum_values[1][sv1]) + "</span> received their degrees from " + sv1.substring(1,sv1.length).replace(" and ", "&") +".<br>A total of <span class='numStudents'>" + formatPercentage(1 - (sum_values[2]["gNo Degree"] / sum_values[1][sv1])) + "</span> earned a degree from UC Berkeley by the end of the 2012-13 Academic Year.");
 				}
 			}
@@ -555,19 +535,14 @@
 
 					d3.select("#commentary").append("text")
 						.style("opacity", 0)
-						.attr("transform", "translate(400,200)")
-						.html("Of the <span class='numStudents'>" + formatNumber(sum_values[2][sv2]) + "</span> students who did <span style='color:#fb6a4a;'>not</span> earn a degree by the end of the 2012-13 Academic Year,<br><span class='numStudents'>" + formatPercentage(sum_values[1]["dNo Declared Major"] / sum_values[2][sv2]) + "</span> did not declare a major, and <span class='numStudents'>" + formatPercentage((sum_values[0]["iL and S Undeclared"] + sum_values[0]["iNo Intended Major"]) / sum_values[2][sv2]) + "</span> were admitted as undeclared or with no intending major specified.");	
+						.html("<br>Of the <span class='numStudents'>" + formatNumber(sum_values[2][sv2]) + "</span> students who did <span style='color:#fb6a4a;'>not</span> earn a degree by the end of the 2012-13 Academic Year,<br><span class='numStudents'>" + formatPercentage(sum_values[1]["dNo Declared Major"] / sum_values[2][sv2]) + "</span> did not declare a major, and <span class='numStudents'>" + formatPercentage((sum_values[0]["iL and S Undeclared"] + sum_values[0]["iNo Intended Major"]) / sum_values[2][sv2]) + "</span> were admitted as undeclared or with no intending major specified.");	
 					}
 				else {
 				d3.select("#commentary").append("text")
 					.style("opacity", 0)
-					.attr("transform", "translate(400,200)")
-					.html("Of the <span class='numStudents'>" + formatNumber(sum_values[2][sv2]) + "</span> students who received a degree from " + sv2.substring(1,sv2.length).replace(" and ", "&") + ",<br><span class='numStudents'>" + formatPercentage(sum_values[1][sv1] / sum_values[2][sv2]) + "</span> declared their major there, and <span class='numStudents'>" + formatPercentage(sum_values[0][sv0] / sum_values[2][sv2]) + "</span> were admitted intending to major there.");	
+					.html("<br>Of the <span class='numStudents'>" + formatNumber(sum_values[2][sv2]) + "</span> students who received a degree from " + sv2.substring(1,sv2.length).replace(" and ", "&") + ",<br><span class='numStudents'>" + formatPercentage(sum_values[1][sv1] / sum_values[2][sv2]) + "</span> declared their major there, and <span class='numStudents'>" + formatPercentage(sum_values[0][sv0] / sum_values[2][sv2]) + "</span> were admitted intending to major there.");	
 				}
 			}
-			// console.log(sum_values[0][sv0] + " incoming students intended to major in " + sv0);
-			// console.log(sum_values[1][sv1] + " incoming students declareed a major in " + sv1);
-			// console.log(sum_values[2][sv2] + " incoming students received a degree in " + sv2);
 
 			d3.selectAll("#commentary text")
 					.transition().duration(2000)
@@ -601,10 +576,18 @@
 	</script>                                                               
  </head>                                                                 
  <body>
-		
+	<div id="header">2007 Cohort Major Flows by Campus College/Division</div>
 	<div id="navigation">
-		<h1>2007 Cohort Major Flows</h1>
-		<h2>by Campus College/Division</h2>
+		<div id="story1" class="story">
+			<div class="list-group">
+			  <a href="http://saraquigley.github.io/major-migration-narrative/" target="_blank">Major Migration Narrative</a>
+			</div>				
+		</div>
+<!-- 		<div id="button"></div> -->
+		<div class="box">	
+			<div class="checkboxText">Show number of students</div>		
+			<input id="showNumberCheckbox" type="checkbox" onClick="showValues()" >
+		</div>
 		<div class="chartBox">
 			<h3>% INTENDED &rarr; DEGREE</h3>
 			<span class="chartNote"><i>The percent of students who intended to major and then earned a degree from the same area. (grey = any UCB degree)</i></span>
@@ -614,45 +597,13 @@
 			<h3>% DECLARED &rarr; DEGREE</h3>
 			<span class="chartNote"><i>The percent of students who declared a major and then earned a degree from the same area (grey = any UCB degree)</i></span>
 			<div id="decChart"></div>
-			
 		</div>
 				<!-- <button class="overviewbutton" onclick="getOverview()">Reload</button> -->
-		<div class="box">	
-			<div class="checkboxText">Show number of students</div>		
-			<input id="showNumberCheckbox" type="checkbox" onClick="showValues()" >
-		</div>
-<!-- 		<div id="stories">
-			<div id="story1" class="story">
-				<div class="list-group">
-				  <a href="#" class="list-group-item active">
-				    93% of students who entered L&S with an undeclared major graduated within 6 years, which is a better intent-to-degree persistence rate than even Haas.
-				  </a>
-				</div>				
-			</div> -->
-<!-- 			<div id="story2" class="story">
-				<div class="list-group">
-				  <a href="#" class="list-group-item active">
-				    89% of students who did not declare a major did not earn a degree by the end of the 2012-13 Academic Year.
-				  </a>
-				</div>				
-			</div> -->
-<!-- 			<div id="story3" class="story">
-				<div class="list-group">
-				  <a href="#" class="list-group-item active">
-				    About two-thirds of students who did not earn a degree actually did declare an undergraduate major.
-				  </a>			
-				</div>
-			</div> -->
-<!-- 		</div> -->
-
-		<div id="footer">DATA SOURCE: <a href="http://calanswers.berkeley.edu/" target="_blank">CalAnswers</a>
-			<br><br>THANKS TO <a href="http://www.visual-telling.com" target="_blank">VISUAL-TELLING.COM</a> FOR THE SUPER SWEET CHART EXAMPLE.
+		<div id="footer">DATA SOURCE: <a href="http://calanswers.berkeley.edu/" target="_blank">Cal Answers</a>
 		</div>
 	</div>
-	<div>
+		<div id="commentary" ></div>
 		<div id="content" ></div>
-		<div id="commentary"><div>
-	</div>
  </body>                                                                 
  </html>
  
