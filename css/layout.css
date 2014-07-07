@@ -1,0 +1,292 @@
+
+/*--------*/
+/* Layout */
+/*--------*/
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: white;
+		min-width: 1200px;
+}
+
+div#navigation
+{
+	background-color: #fff;
+	padding: 0em 1em 0em 1em;
+	width: 200px;
+	height: 100%;
+	float: left;
+	margin:0;
+}
+
+h1 
+{
+	font-family: 'Lato';
+	margin: 0 0 0 0;
+	padding: 0.75em 0 0 0;
+	font-size: 20pt;
+	font-weight: 400;
+	color: #4d4d4d;
+}
+
+h2 
+{
+	color: #4d4d4d;
+	margin: 5px 0 15px 0;
+	padding: 0 0 0 0;
+	font-family: 'Lato';
+	font-size: 9pt;
+	font-weight: normal;
+	text-align: justify;
+}
+
+h3{
+	color: #4d4d4d;
+	margin: 5px 0 5px 0;
+	padding: 0 0 0 0;
+	font-family: 'Lato';
+	font-size: 9pt;
+	font-weight: normal;
+	text-align: center;
+}
+
+p
+{
+	font-family: 'Lato';
+	margin: 3px 0 0px 0;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #4d4d4d;
+}
+
+div#content
+{
+	background-color: white;
+	padding: 0px 0px 0px 5px;
+	margin: 0;
+}
+
+div#controls
+{
+	width: 100%;
+	margin: 15px auto;
+	font-family: 'Lato';
+	font-size: 10px;
+	color: #666666;
+}
+
+div#footer
+{
+	font-family: 'Lato';
+	font-size: 10px;
+	color: #666666;
+}
+
+div#commentary {
+	font: 900 20px 'Lato';	
+	color: #525252;
+	padding: 0em 0em 1em 13.25em;
+	float: bottom;
+}
+
+div#commentary text {
+	margin-top: 20px;
+}
+
+div.chartBox {
+	font-family: 'Lato';
+	font-size: 9pt;
+	color: #4d4d4d;
+	width: 100%;
+	float: left;
+	margin: 10px 0 10px 0;
+}
+
+div#navChart{
+
+}
+
+.story {
+	display: inline-block;
+	vertical-align: middle;
+	font: 600 14px 'Lato';	
+	padding: 8px;
+	margin: 0px 0px 4px -8px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	/*box-shadow: 0 0 16px 5px #ddd inset;*/
+	width: 210px;
+	overflow: hidden;
+	word-break: break-all;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+	background-color: #fefefe;
+	position: relative;
+}
+
+.story a:link, a:visited {
+	color: #525252;
+	text-decoration: none;
+}
+
+.story a:hover {
+	color: steelblue;
+	text-decoration: none;
+
+}
+
+div#story2:hover{	
+	background-color: #eee;
+}
+
+div#story3 {
+}
+
+
+
+
+.numStudents {
+	color: steelblue;
+}
+
+
+a  
+{
+	font-family: 'Lato';
+}
+
+/*a:link 
+{ 
+	color: #666666; 
+	
+}
+
+a:visited
+{ 
+	color: #666666; 
+	
+}
+
+a:focus 
+{ 
+	color: #666666; 
+	
+}
+
+a:hover 
+{ 
+	color: red; 
+	
+}
+
+a:active 
+{ 
+	color: #666666; 
+	
+}*/
+
+/*---------------*/
+/* Nav Chart */
+/*---------------*/
+
+.bar {
+  opacity: .95;	
+}
+
+.bar:hover {
+  opacity: .5;	
+}
+
+.axis {
+  font: 12px 'Lato', sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #ccc;
+  stroke-dasharray: 2,2;
+  shape-rendering: crispEdges;
+}
+
+
+
+.x.axis path {
+  display: none;
+}
+
+ /* d3 tooltip */
+    .d3-tip {
+      line-height: 1;
+      font-weight: bold;
+      font-size: 18px;
+      font-family: 'Lato', sans-serif;
+      padding: 12px;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      border-radius: 8px;
+    }
+
+    /* Creates a small triangle extender for the tooltip */
+    .d3-tip:after {
+      box-sizing: border-box;
+      display: inline;
+      font-size: 10px;
+      width: 100%;
+      line-height: 1;
+      color: rgba(0, 0, 0, 0.8);
+      content: "\25BC";
+      position: absolute;
+      text-align: center;
+    }
+
+    /* Style northward tooltips differently */
+    .d3-tip.n:after {
+      margin: -1px 0 0 0;
+      top: 100%;
+      left: 0;
+    }
+
+.chartNote {
+	font-family: 'Lato';
+	font-size: 8pt;
+	margin: 0 0 10 10;
+	padding: 1px 0 0 0;
+	float: right;
+	color: #4d4d4d;
+}
+
+/*---------------*/
+/* Toggle Button */
+/*---------------*/
+
+.checkboxText
+{
+	font-family: 'Lato';
+	font-size: 10pt;
+	margin: 0 0 0 0;
+	padding: 0px 0 0 0;
+	float: left;
+	color: #4d4d4d;
+	vertical-align: text-top;
+}
+
+.box 
+{
+	width: 100%;
+	float: left;
+	margin: 5px 0 10px 0;
+}
+
+/*-----------------*/
+/* Overview Button */
+/*-----------------*/
+
+.overviewbutton
+{
+	margin: 10px 0px 5px 0;
+	padding: 3px;
+	color: #4d4d4d;
+}

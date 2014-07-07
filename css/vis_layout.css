@@ -1,0 +1,86 @@
+/*---------------------------*/
+/* Flow Visualization Layout */
+/*---------------------------*/
+
+.svg_canvas
+{
+	height: 700px;
+}
+
+.dimension_header
+{
+	font: 200 14px 'Lato';
+	text-anchor: middle;
+}
+
+.aggregate_label
+{
+	font-family: 'Lato';
+	text-anchor: start;
+	dominant-baseline: middle;
+}
+
+.value_label
+{
+	font: 200 28px 'Lato';
+	text-anchor: end;
+	dominant-baseline: middle;
+}
+
+.dimension_group
+{
+	
+}
+
+.dimension_line
+{
+	fill: none;
+	/*stroke: #969696;*/
+	stroke-width: 7px;
+	stroke-linecap: round;
+	stroke-linejoin: miter;
+	stroke-opacity: 1;
+}
+
+.dimension_line_highlighted
+{
+	fill: none;
+	/*stroke: #969696;*/
+	stroke-width: 7px;
+	stroke-linecap: round;
+	stroke-linejoin: miter;
+	stroke-opacity: 0.2;
+}
+
+.interaction_shape
+{
+	fill: #E7BA52;
+	opacity: 0.0;
+}
+
+.flow_line
+{
+	fill: steelblue;
+	fill-opacity: 0.31153847;
+	stroke: none;
+}
+
+.flow_line_highlighted
+{
+	fill: steelblue;
+	fill-opacity: .5;
+	stroke: none;
+	transition-duration: 1s;
+}
+
+.flow_line_hide
+{
+	fill: #ccc;
+	fill-opacity: 0.25;
+	stroke: none;
+	transition-duration: 1s;
+}
+
+
+
+
