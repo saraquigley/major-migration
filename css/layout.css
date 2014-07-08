@@ -22,12 +22,12 @@ div#navigation
 
 #header
 {
-	font-family: 'Lato';
+	font-family: 'Lato', sans-serif;
 	margin: 0 0 0 0;
-	padding: 0.25em 0 0 0.5em;
+	padding: 0.25em 0 0 1em;
 	font-size: 20pt;
 	font-weight: 400;
-	color: #4d4d4d;
+	color: #696969;
 }
 
 h2 
@@ -80,7 +80,7 @@ div#footer
 	color: #525252;
 	height: 30px;
 	width: auto;
-	padding: 5px 60px 5px 260px;
+	padding: 10px 60px 5px 260px;
 }
 
 div#commentary text {
@@ -148,11 +148,11 @@ a:active
 	text-align: center;
 	font: 900 16px 'Lato';
 	padding: 8px;
-	margin: 3em 0px 4px -8px;
+	margin: .5em 1em 1px 1em;
 	border: 1px solid #ddd;
 	border-radius: 10px;
 	/*box-shadow: 0 0 16px 5px #ddd inset;*/
-	width: 210px;
+	width: 160px;
 	overflow: hidden;
 	word-break: break-all;
 	word-break: break-word;
@@ -246,7 +246,7 @@ a:active
 .box 
 {
 	width: 100%;
-	margin: 1em 0 0 0;
+	margin: 2em 1em 0 1em;
 }
 
 #showNumberCheckbox {
