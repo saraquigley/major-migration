@@ -76,11 +76,11 @@ div#footer
 }
 
 #commentary {
-	font: 900 20px 'Lato';	
+	font: 900 18px 'Lato';	
 	color: #525252;
 	height: 30px;
 	width: auto;
-	padding: 10px 60px 5px 260px;
+	padding: 10px 60px 5px 270px;
 }
 
 div#commentary text {
