@@ -3,17 +3,17 @@ function drawIntChart() {
 
 // persist chart
 var persistData = [
-{"college": "iL and S Administered Programs","sameValue": 44,"anyValue": 46,"totalValue":90,"color": "#CE6DBD","axisName": "L&S Programs"},
-{"college": "iL and S Math and Physical Sciences","sameValue": 49,"anyValue": 43,"totalValue":92,"color": "#393B79","axisName": "Math Phys Sci"},
-{"college": "iL and S Undergraduate Division","sameValue": 53,"anyValue": 40,"totalValue":93,"color": "#7a0177","axisName": "L&S Undergrad"},
-{"college": "iL and S Bio Sciences","sameValue": 53,"anyValue": 42,"totalValue":95,"color": "#6B6ECF","axisName": "Bio Sciences"},
-{"college": "iL and S Arts and Humanities","sameValue": 58,"anyValue": 33,"totalValue":92,"color": "#88419d","axisName": "Arts Humanities"},
-{"college": "iCollege of Natural Resources","sameValue": 59,"anyValue": 32,"totalValue":91,"color": "#637939","axisName": "Nat Resources"},
-{"college": "iL and S Social Sciences","sameValue": 60,"anyValue": 34,"totalValue":94,"color": "#5254A3","axisName": "Social Sciences"},
-{"college": "iCollege of Chemistry","sameValue": 63,"anyValue": 27,"totalValue":90,"color": "#01665E","axisName": "Chemistry"},
-{"college": "iCollege of Environmental Design","sameValue": 68,"anyValue": 24,"totalValue":92,"color": "#b5cf6b","axisName": "Env Design"},
-{"college": "iCollege of Engineering","sameValue": 84,"anyValue": 9,"totalValue":93,"color": "#35978F","axisName": "Engineering"},
-{"college": "iHaas School of Business","sameValue": 91,"anyValue": 8,"totalValue":99,"color": "#bd9e39","axisName": "Business"}
+{"college": "iL and S Administered Programs","sameValue": 47,"anyValue": 42,"totalValue":89,"color": "#CE6DBD","axisName": "L&S Programs"},
+{"college": "iL and S Math and Physical Sciences","sameValue": 52,"anyValue": 39,"totalValue":91,"color": "#393B79","axisName": "Math Phys Sci"},
+{"college": "iL and S Bio Sciences","sameValue": 55,"anyValue": 39,"totalValue":94,"color": "#6B6ECF","axisName": "Bio Sciences"},
+{"college": "iL and S Undergraduate Division","sameValue": 59,"anyValue": 33,"totalValue":92,"color": "#7a0177","axisName": "L&S Undergrad"},
+{"college": "iL and S Arts and Humanities","sameValue": 62,"anyValue": 28,"totalValue":90,"color": "#88419d","axisName": "Arts Humanities"},
+{"college": "iCollege of Natural Resources","sameValue": 64,"anyValue": 27,"totalValue":91,"color": "#637939","axisName": "Nat Resources"},
+{"college": "iL and S Social Sciences","sameValue": 65,"anyValue": 28,"totalValue":93,"color": "#5254A3","axisName": "Social Sciences"},
+{"college": "iCollege of Chemistry","sameValue": 66,"anyValue": 23,"totalValue":89,"color": "#01665E","axisName": "Chemistry"},
+{"college": "iCollege of Environmental Design","sameValue": 71,"anyValue": 21,"totalValue":92,"color": "#b5cf6b","axisName": "Env Design"},
+{"college": "iCollege of Engineering","sameValue": 87,"anyValue": 6,"totalValue":93,"color": "#35978F","axisName": "Engineering"},
+{"college": "iHaas School of Business","sameValue": 99,"anyValue": 0,"totalValue":99,"color": "#bd9e39","axisName": "Business"}
 ];
 
 var margin = {top: 0, right: 10, bottom: 20, left: 100},

@@ -3,17 +3,17 @@ function drawDecChart() {
 
 // persist chart
 var persistData = [
-{"college": "dCollege of Chemistry","sameValue": 64,"anyValue": 26,"totalValue":90,"color": "#01665E","axisName": "Chemistry"},
-{"college": "dCollege of Environmental Design","sameValue": 70,"anyValue": 23,"totalValue":93,"color": "#b5cf6b","axisName": "Env Design"},
-{"college": "dCollege of Natural Resources","sameValue": 75,"anyValue": 19,"totalValue":94,"color": "#637939","axisName": "Nat Resources"},
-{"college": "dL and S Arts and Humanities","sameValue": 76,"anyValue": 17,"totalValue":93,"color": "#88419d","axisName": "Arts Humanities"},
-{"college": "dL and S Math and Physical Sciences","sameValue": 78,"anyValue": 18,"totalValue":96,"color": "#393B79","axisName": "Math Phys Sci"},
-{"college": "dL and S Social Sciences","sameValue": 79,"anyValue": 16,"totalValue":95,"color": "#5254A3","axisName": "Social Sciences"},
-{"college": "dL and S Administered Programs","sameValue": 79,"anyValue": 17,"totalValue":96,"color": "#CE6DBD","axisName": "L&S Programs"},
-{"college": "dL and S Undergraduate Division","sameValue": 81,"anyValue": 13,"totalValue":94,"color": "#7a0177","axisName": "L&S Undergrad"},
-{"college": "dHaas School of Business","sameValue": 81,"anyValue": 19,"totalValue":100,"color": "#bd9e39","axisName": "Business"},
-{"college": "dCollege of Engineering","sameValue": 84,"anyValue": 10,"totalValue":94,"color": "#35978F","axisName": "Engineering"},
-{"college": "dL and S Bio Sciences","sameValue": 86,"anyValue": 12,"totalValue":98,"color": "#6B6ECF","axisName": "Bio Sciences"}
+{"college": "dCollege of Chemistry","sameValue": 68,"anyValue": 21,"totalValue":89,"color": "#01665E","axisName": "Chemistry"},
+{"college": "dCollege of Environmental Design","sameValue": 74,"anyValue": 19,"totalValue":93,"color": "#b5cf6b","axisName": "Env Design"},
+{"college": "dCollege of Natural Resources","sameValue": 82,"anyValue": 9,"totalValue":93,"color": "#637939","axisName": "Nat Resources"},
+{"college": "dL and S Arts and Humanities","sameValue": 88,"anyValue": 4,"totalValue":92,"color": "#88419d","axisName": "Arts Humanities"},
+{"college": "dCollege of Engineering","sameValue": 88,"anyValue": 6,"totalValue":94,"color": "#35978F","axisName": "Engineering"},
+{"college": "dL and S Undergraduate Division","sameValue": 91,"anyValue": 2,"totalValue":93,"color": "#7a0177","axisName": "L&S Undergrad"},
+{"college": "dL and S Math and Physical Sciences","sameValue": 91,"anyValue": 4,"totalValue":95,"color": "#393B79","axisName": "Math Phys Sci"},
+{"college": "dL and S Administered Programs","sameValue": 92,"anyValue": 4,"totalValue":96,"color": "#CE6DBD","axisName": "L&S Programs"},
+{"college": "dL and S Social Sciences","sameValue": 93,"anyValue": 1,"totalValue":94,"color": "#5254A3","axisName": "Social Sciences"},
+{"college": "dL and S Bio Sciences","sameValue": 96,"anyValue": 1,"totalValue":97,"color": "#6B6ECF","axisName": "Bio Sciences"},
+{"college": "dHaas School of Business","sameValue": 100,"anyValue": 0,"totalValue":100,"color": "#bd9e39","axisName": "Business"}
 ];
 
 var margin = {top: 0, right: 10, bottom: 20, left: 100},

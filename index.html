@@ -138,9 +138,9 @@
 	   }
 		function loadAggregate()
 		{
-			d3.json("idg_div_aggregate5.json", function(error, json) {
+			d3.csv("idg_div_aggregate6.csv", function(error, csv) {
 			  if (error) return console.warn(error);
-			  data = json;
+			  data = csv;
 			  var aggregates = d3.nest().key(function(d) {return d.aggregate;}).entries(data);
 
 			  dimensions = d3.nest().key(function(d) {return d.dimension.substring(1, d.dimension.length);}).entries(data).map(function (d) {return d.key;});
@@ -199,14 +199,14 @@
 		
 		function loadFlows()
 		{
-			d3.json("idg_div5.json", function(error, json) {
-			  if (error) return console.warn(error);
-			  data = json;
-			  
-			  drawFlows(data);
 
-			  });
-		}
+			//load the csv file into an object
+			d3.csv("idg_div6.csv", function(error, csv) {
+			 
+			drawFlows(csv);
+
+		});
+	}
 				
 		function initializeFlow()
 		{
